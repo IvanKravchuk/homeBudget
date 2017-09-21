@@ -56,7 +56,7 @@ class Transaction: NSObject, NSCoding {
             String {
             type = typeObj
         }
-        if let valueObj = aDecoder.decodeObject(forKey: Keys.Value) as?
+        if let valueObj = aDecoder.decodeDouble(forKey: Keys.Value) as?
             Double {
             value = valueObj
         }

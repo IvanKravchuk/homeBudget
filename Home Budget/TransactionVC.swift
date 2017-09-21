@@ -56,14 +56,14 @@ class TransactionVC: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadData()
         let balance = self.calculateBalance(transactions: store.transactions)
 //        print(balance)
         self.balanceLabel.text = "Balance \(balance)"
         
         transactionTableView.delegate = self
         transactionTableView.dataSource = self
-        loadData()
+        
         let rightButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(self.moveCreateUpdateTransaction))
         self.navigationItem.rightBarButtonItem = rightButton
     }

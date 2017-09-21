@@ -109,7 +109,7 @@ class CreateUpdateTransactionVC: UIViewController {
         let transactionName = nameField.text!
         let transactionDesc = descriptionField.text!
         let transactionValue = Double(valueField.text!)!
-        print(transactionValue)
+//        print(transactionValue)
         
         let newTransaction = Transaction(name: transactionName, description: transactionDesc, type: "",value: transactionValue, category: category!)
         self.saveData(transaction: newTransaction)

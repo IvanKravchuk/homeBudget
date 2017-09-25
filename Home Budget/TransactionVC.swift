@@ -16,13 +16,13 @@ class TransactionVC: UIViewController  {
     
     @IBAction func showDiagram(_ sender: Any) {
         DispatchQueue.main.async(execute: { () -> Void in
-            self.performSegue(withIdentifier: "diagramSegue", sender: self)
+            self.performSegue(withIdentifier: "reportSegue", sender: self)
         })
     }
     
     var store = DataStore.sharedInstance
     
-//    var balance
+    var balance = Double()
     
     //Save data on file
     var filePath: String {
@@ -36,19 +36,25 @@ class TransactionVC: UIViewController  {
         if let fileData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as?
             [Transaction] {
             self.store.transactions = fileData
+            
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         loadData()
         transactionTableView.reloadData()
+        refreshBalance()
     }
     
     func calculateBalance(transactions: [Transaction]) -> Double{
         var balanceValue: Double = 0.0
         for transaction in transactions {
-            print(transaction.value)
-            balanceValue = balanceValue + transaction.value
+            if transaction.type {
+                balanceValue += transaction.value
+            }else{
+                balanceValue -= transaction.value
+            }
+            print(transaction.date)
         }
         return balanceValue
     }
@@ -57,9 +63,7 @@ class TransactionVC: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        let balance = self.calculateBalance(transactions: store.transactions)
-//        print(balance)
-        self.balanceLabel.text = "Balance \(balance)"
+        refreshBalance()
         
         transactionTableView.delegate = self
         transactionTableView.dataSource = self
@@ -79,7 +83,11 @@ class TransactionVC: UIViewController  {
         })
     }
     
-    
+    func refreshBalance(){
+        self.balance = self.calculateBalance(transactions: store.transactions)
+        self.balanceLabel.text = "Balance \(String(describing: self.balance))"
+    }
+
     
 
     
@@ -116,6 +124,16 @@ extension TransactionVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if store.transactions[indexPath.row].type == true{
+             cell.backgroundColor = UIColor(red: 0/255, green: 200/255, blue: 20/255, alpha: 0.7)
+        }else{
+            cell.backgroundColor = UIColor(red: 200/255, green: 0/255, blue: 20/255, alpha: 0.7)
+        }
+        
+        cell.textLabel?.textColor=UIColor.white
+        cell.textLabel?.font = UIFont.init(name: "Helvetica", size: 100)
+    }
 }
 
 //MARK: table view data source
@@ -132,6 +150,7 @@ extension TransactionVC : UITableViewDataSource {
         let cell = transactionTableView.dequeueReusableCell(withIdentifier: "transactionCell") as! TransactionCell
         
         cell.cellLabel.text = store.transactions[indexPath.row].name
+        cell.cellValue.text = String(store.transactions[indexPath.row].value)
 //        cell.detailTextLabel?.text = self.store.categories[indexPath.row].Description
         return cell
     }
@@ -154,11 +173,13 @@ extension TransactionVC : UITableViewDataSource {
             self.store.transactions.remove(at: indexPath.row)
             NSKeyedArchiver.archiveRootObject(self.store.transactions, toFile: self.filePath)
             self.transactionTableView.reloadData()
+            self.refreshBalance()
         }
         let update = UITableViewRowAction(style: .default, title: "UPDATE"){(action, indexPath) in
             let index = indexPath.row
             self.performSegue(withIdentifier: "updateTransactionSegue", sender: index)
             self.transactionTableView.reloadData()
+            self.refreshBalance()
         }
         return[delete,update]
     }

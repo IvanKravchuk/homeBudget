@@ -20,17 +20,17 @@ class Transaction: NSObject, NSCoding {
     
     var name = ""
     var desc = ""
-    var type = ""
+    var type = false
     var value = 0.0
     var category = Category()
-    var date = ""
+    var date = Date()
     
     
     override init() {
         
     }
     
-    init(name: String, description: String, type: String, value: Double, category: Category) {
+    init(name: String, description: String, type: Bool, value: Double, category: Category) {
         self.name = name
         self.desc = description
         self.type = type
@@ -40,7 +40,7 @@ class Transaction: NSObject, NSCoding {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy"
         let stringDate = formatter.string(from: dateNow)
-        self.date = stringDate
+        self.date = formatter.date(from: stringDate)!
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -52,8 +52,8 @@ class Transaction: NSObject, NSCoding {
             String {
             desc = descriptionObj
         }
-        if let typeObj = aDecoder.decodeObject(forKey: Keys.TypeOf) as?
-            String {
+        if let typeObj = aDecoder.decodeBool(forKey: Keys.TypeOf) as?
+            Bool {
             type = typeObj
         }
         if let valueObj = aDecoder.decodeDouble(forKey: Keys.Value) as?
@@ -65,7 +65,7 @@ class Transaction: NSObject, NSCoding {
             category = categoryObj
         }
         if let dateObj = aDecoder.decodeObject(forKey: Keys.Date) as?
-            String {
+            Date {
             date = dateObj
         }
 

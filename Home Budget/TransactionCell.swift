@@ -12,4 +12,6 @@ import UIKit
 class TransactionCell: UITableViewCell {
     
     @IBOutlet weak var cellLabel: UILabel!
+    
+    @IBOutlet weak var cellValue: UILabel!
 }

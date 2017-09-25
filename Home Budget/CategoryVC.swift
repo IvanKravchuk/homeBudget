@@ -42,7 +42,7 @@ class CategoryVC: UIViewController {
         NSKeyedArchiver.archiveRootObject(self.store.categories, toFile: filePath)
     }
 
-
+   
     @IBOutlet weak var categoryTableView: UITableView!
     
     
@@ -86,6 +86,10 @@ class CategoryVC: UIViewController {
 
 //MARK: table view delegate
 extension CategoryVC : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 

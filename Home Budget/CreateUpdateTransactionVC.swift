@@ -9,26 +9,28 @@
 import UIKit
 
 class CreateUpdateTransactionVC: UIViewController {
+    @IBOutlet weak var typeSwitch: UISwitch!
 
+    @IBOutlet weak var typeLabel: UILabel!
     
+    @IBAction func onOffSwitch(_ sender: Any) {
+        if typeSwitch.isOn{
+            typeLabel.text = "gain"
+        }else{
+            typeLabel.text = "expense"
+        }
+    }
     @IBOutlet weak var nameField: UITextField!
     
     @IBOutlet weak var descriptionField: UITextField!
     
     @IBAction func categoryName(_ sender: Any) {
-        
     }
     
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var categoryLabel: UILabel!
     
     @IBOutlet weak var valueField: UITextField!
-    
-    @IBOutlet weak var valueLabel: UILabel!
     
     var nameText : String?
     
@@ -78,13 +80,6 @@ class CreateUpdateTransactionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        nameField.text = nameText
-//        descriptionField.text = descriptionText
-//        categoryField.text = category?.name
-//        self.title = viewTitle
-//        let rightButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.saveTransaction))
-//        self.navigationItem.rightBarButtonItem = rightButton
-//
         if index != nil{
             nameField.text = self.store.transactions[index!].name
             descriptionField.text = self.store.transactions[index!].desc
@@ -109,9 +104,10 @@ class CreateUpdateTransactionVC: UIViewController {
         let transactionName = nameField.text!
         let transactionDesc = descriptionField.text!
         let transactionValue = Double(valueField.text!)!
-//        print(transactionValue)
+        let transactionType = typeSwitch.isOn
+        print(transactionType)
         
-        let newTransaction = Transaction(name: transactionName, description: transactionDesc, type: "",value: transactionValue, category: category!)
+        let newTransaction = Transaction(name: transactionName, description: transactionDesc, type: transactionType,value: transactionValue, category: category!)
         self.saveData(transaction: newTransaction)
         navigationController?.popViewController(animated: true)
     }

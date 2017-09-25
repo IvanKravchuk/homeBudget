@@ -11,10 +11,6 @@ import UIKit
 class CreateUpdateCategoryVC: UIViewController {
 
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var nameField: UITextField!
     
     @IBOutlet weak var descriptionField: UITextField!

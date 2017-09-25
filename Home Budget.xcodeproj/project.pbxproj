@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1E487A78611B0914369077 /* Pods_Home_Budget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F213307EC0DF599F5CC6491 /* Pods_Home_Budget.framework */; };
 		8406DC0D1F6929CA001A7EB0 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406DC0C1F6929CA001A7EB0 /* CategoryVC.swift */; };
 		8406DC0F1F6929F6001A7EB0 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406DC0E1F6929F6001A7EB0 /* TransactionVC.swift */; };
+		8413A10E1F783E46007E7C27 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413A10D1F783E46007E7C27 /* ReportCell.swift */; };
 		842C980C1F67CAF700E42799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C980B1F67CAF700E42799 /* AppDelegate.swift */; };
 		842C98111F67CAF700E42799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C980F1F67CAF700E42799 /* Main.storyboard */; };
 		842C98131F67CAF700E42799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C98121F67CAF700E42799 /* Assets.xcassets */; };
@@ -17,37 +19,13 @@
 		842E1AFF1F6D543700FC36F7 /* CreateUpdateTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E1AFE1F6D543700FC36F7 /* CreateUpdateTransactionVC.swift */; };
 		842E1B011F6D64F100FC36F7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E1B001F6D64F100FC36F7 /* CategoryCell.swift */; };
 		842E1B031F6DA5E300FC36F7 /* CreateUpdateCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E1B021F6DA5E300FC36F7 /* CreateUpdateCategoryVC.swift */; };
-		843FE9A31F711CC3005E07B8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843FE9A01F711C19005E07B8 /* Charts.framework */; };
-		843FE9A41F711CC3005E07B8 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 843FE9A01F711C19005E07B8 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		843FE9A91F717088005E07B8 /* DiagramVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FE9A81F717088005E07B8 /* DiagramVC.swift */; };
+		84850B541F77C4B90060CF81 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850B531F77C4B90060CF81 /* ReportVC.swift */; };
+		84850B571F77C50F0060CF81 /* PieChartReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850B561F77C50F0060CF81 /* PieChartReportVC.swift */; };
+		84850B591F77C53F0060CF81 /* LineChartReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850B581F77C53F0060CF81 /* LineChartReportVC.swift */; };
 		8495D4FC1F692520004E5E4B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495D4FB1F692520004E5E4B /* DataStore.swift */; };
 		84F5B5081F69237400247668 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5B5071F69237400247668 /* Category.swift */; };
 		84F5B50A1F69238700247668 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5B5091F69238700247668 /* Transaction.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		843FE99F1F711C19005E07B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 843FE99A1F711C19005E07B8 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
-			remoteInfo = Charts;
-		};
-		843FE9A11F711C19005E07B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 843FE99A1F711C19005E07B8 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
-			remoteInfo = ChartsTests;
-		};
-		843FE9A51F711CC3005E07B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 843FE99A1F711C19005E07B8 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A58A4ED274A941CA248EA921;
-			remoteInfo = Charts;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		843FE9A71F711CC4005E07B8 /* Embed Frameworks */ = {
@@ -56,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				843FE9A41F711CC3005E07B8 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,8 +41,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F213307EC0DF599F5CC6491 /* Pods_Home_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home_Budget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8406DC0C1F6929CA001A7EB0 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		8406DC0E1F6929F6001A7EB0 /* TransactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
+		8413A10D1F783E46007E7C27 /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		842C98081F67CAF700E42799 /* Home Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842C980B1F67CAF700E42799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842C98101F67CAF700E42799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,11 +55,14 @@
 		842E1AFE1F6D543700FC36F7 /* CreateUpdateTransactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUpdateTransactionVC.swift; sourceTree = "<group>"; };
 		842E1B001F6D64F100FC36F7 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		842E1B021F6DA5E300FC36F7 /* CreateUpdateCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUpdateCategoryVC.swift; sourceTree = "<group>"; };
-		843FE99A1F711C19005E07B8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
-		843FE9A81F717088005E07B8 /* DiagramVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagramVC.swift; sourceTree = "<group>"; };
+		84850B531F77C4B90060CF81 /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		84850B561F77C50F0060CF81 /* PieChartReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartReportVC.swift; sourceTree = "<group>"; };
+		84850B581F77C53F0060CF81 /* LineChartReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartReportVC.swift; sourceTree = "<group>"; };
 		8495D4FB1F692520004E5E4B /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		84F5B5071F69237400247668 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		84F5B5091F69238700247668 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		8B841D177A43E95267DE1BD8 /* Pods-Home Budget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home Budget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Home Budget/Pods-Home Budget.release.xcconfig"; sourceTree = "<group>"; };
+		F0D32BD49C371B7CDBB9E738 /* Pods-Home Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home Budget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Home Budget/Pods-Home Budget.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,19 +70,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843FE9A31F711CC3005E07B8 /* Charts.framework in Frameworks */,
+				3F1E487A78611B0914369077 /* Pods_Home_Budget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34CC15876F994FCCC692BDAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F213307EC0DF599F5CC6491 /* Pods_Home_Budget.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7801978B2A0CF22DC0156A59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0D32BD49C371B7CDBB9E738 /* Pods-Home Budget.debug.xcconfig */,
+				8B841D177A43E95267DE1BD8 /* Pods-Home Budget.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		842C97FF1F67CAF700E42799 = {
 			isa = PBXGroup;
 			children = (
 				842C980A1F67CAF700E42799 /* Home Budget */,
 				842C98091F67CAF700E42799 /* Products */,
-				843FE99A1F711C19005E07B8 /* Charts.xcodeproj */,
+				7801978B2A0CF22DC0156A59 /* Pods */,
+				34CC15876F994FCCC692BDAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				842C980B1F67CAF700E42799 /* AppDelegate.swift */,
-				843FE9A81F717088005E07B8 /* DiagramVC.swift */,
 				8406DC0E1F6929F6001A7EB0 /* TransactionVC.swift */,
 				8406DC0C1F6929CA001A7EB0 /* CategoryVC.swift */,
 				842E1AFE1F6D543700FC36F7 /* CreateUpdateTransactionVC.swift */,
@@ -130,17 +129,12 @@
 				8495D4FB1F692520004E5E4B /* DataStore.swift */,
 				842E1AFC1F6D45C200FC36F7 /* TransactionCell.swift */,
 				842E1B001F6D64F100FC36F7 /* CategoryCell.swift */,
+				84850B531F77C4B90060CF81 /* ReportVC.swift */,
+				84850B561F77C50F0060CF81 /* PieChartReportVC.swift */,
+				84850B581F77C53F0060CF81 /* LineChartReportVC.swift */,
+				8413A10D1F783E46007E7C27 /* ReportCell.swift */,
 			);
 			path = "Home Budget";
-			sourceTree = "<group>";
-		};
-		843FE99B1F711C19005E07B8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				843FE9A01F711C19005E07B8 /* Charts.framework */,
-				843FE9A21F711C19005E07B8 /* ChartsTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,15 +144,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 842C981A1F67CAF700E42799 /* Build configuration list for PBXNativeTarget "Home Budget" */;
 			buildPhases = (
+				0729C940556BFA5219773EEA /* [CP] Check Pods Manifest.lock */,
 				842C98041F67CAF700E42799 /* Sources */,
 				842C98051F67CAF700E42799 /* Frameworks */,
 				842C98061F67CAF700E42799 /* Resources */,
 				843FE9A71F711CC4005E07B8 /* Embed Frameworks */,
+				A43EADB3F09BD2973D8255DC /* [CP] Embed Pods Frameworks */,
+				77D1193700E4E5CEBDF2F346 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				843FE9A61F711CC3005E07B8 /* PBXTargetDependency */,
 			);
 			name = "Home Budget";
 			productName = "Home Budget";
@@ -192,35 +188,12 @@
 			mainGroup = 842C97FF1F67CAF700E42799;
 			productRefGroup = 842C98091F67CAF700E42799 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 843FE99B1F711C19005E07B8 /* Products */;
-					ProjectRef = 843FE99A1F711C19005E07B8 /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				842C98071F67CAF700E42799 /* Home Budget */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		843FE9A01F711C19005E07B8 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 843FE99F1F711C19005E07B8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		843FE9A21F711C19005E07B8 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 843FE9A11F711C19005E07B8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		842C98061F67CAF700E42799 /* Resources */ = {
@@ -235,6 +208,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0729C940556BFA5219773EEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Home Budget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D1193700E4E5CEBDF2F346 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Home Budget/Pods-Home Budget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A43EADB3F09BD2973D8255DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Home Budget/Pods-Home Budget-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Home Budget/Pods-Home Budget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		842C98041F67CAF700E42799 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -242,27 +269,22 @@
 			files = (
 				842E1AFF1F6D543700FC36F7 /* CreateUpdateTransactionVC.swift in Sources */,
 				842E1AFD1F6D45C200FC36F7 /* TransactionCell.swift in Sources */,
-				843FE9A91F717088005E07B8 /* DiagramVC.swift in Sources */,
 				842C980C1F67CAF700E42799 /* AppDelegate.swift in Sources */,
 				8495D4FC1F692520004E5E4B /* DataStore.swift in Sources */,
+				84850B591F77C53F0060CF81 /* LineChartReportVC.swift in Sources */,
 				8406DC0D1F6929CA001A7EB0 /* CategoryVC.swift in Sources */,
 				842E1B011F6D64F100FC36F7 /* CategoryCell.swift in Sources */,
 				84F5B5081F69237400247668 /* Category.swift in Sources */,
 				842E1B031F6DA5E300FC36F7 /* CreateUpdateCategoryVC.swift in Sources */,
 				84F5B50A1F69238700247668 /* Transaction.swift in Sources */,
+				84850B541F77C4B90060CF81 /* ReportVC.swift in Sources */,
 				8406DC0F1F6929F6001A7EB0 /* TransactionVC.swift in Sources */,
+				84850B571F77C50F0060CF81 /* PieChartReportVC.swift in Sources */,
+				8413A10E1F783E46007E7C27 /* ReportCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		843FE9A61F711CC3005E07B8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			targetProxy = 843FE9A51F711CC3005E07B8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		842C980F1F67CAF700E42799 /* Main.storyboard */ = {
@@ -381,9 +403,11 @@
 		};
 		842C981B1F67CAF700E42799 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0D32BD49C371B7CDBB9E738 /* Pods-Home Budget.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "Home Budget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kravchuk.Home-Budget";
@@ -394,9 +418,11 @@
 		};
 		842C981C1F67CAF700E42799 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B841D177A43E95267DE1BD8 /* Pods-Home Budget.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "Home Budget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kravchuk.Home-Budget";
